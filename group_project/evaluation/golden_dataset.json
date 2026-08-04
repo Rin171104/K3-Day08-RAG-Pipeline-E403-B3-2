@@ -1,17 +1,122 @@
 [
   {
-    "question": "Học phí hàng năm của chương trình Business tại RMIT Vietnam là bao nhiêu?",
-    "expected_answer": "Khoảng 375.840.000 VND mỗi năm (tùy chương trình cụ thể).",
-    "expected_context": "Trang Tuition Fees, mục Undergraduate Programs"
+    "question": "Điều kiện thành lập công ty TNHH một thành viên theo Luật Doanh nghiệp 2020 gồm những gì?",
+    "expected_answer": "Công ty TNHH một thành viên do một cá nhân hoặc một tổ chức làm chủ sở hữu; phải có vốn điều lệ tối thiểu theo quy định, có trụ sở chính, ngành nghề kinh doanh hợp pháp và thực hiện đăng ký tại cơ quan đăng ký kinh doanh có thẩm quyền.",
+    "expected_context": "luat-doanh-nghiep-2020.pdf, mục Công ty TNHH một thành viên",
+    "category": "thanh_lap_doanh_nghiep"
   },
   {
-    "question": "Học phí được thanh toán theo hình thức nào?",
-    "expected_answer": "Thanh toán theo từng học kỳ, tính theo từng môn học đã đăng ký.",
-    "expected_context": "Trang Tuition Fees, mục Payment Structure"
+    "question": "Hồ sơ đăng ký hộ kinh doanh cá thể cần những giấy tờ gì?",
+    "expected_answer": "Giấy đề nghị đăng ký hộ kinh doanh (theo Thông tư 68/2025/TT-BTC), bản sao giấy tờ pháp lý của cá nhân, và hồ sơ được nộp tại cơ quan đăng ký kinh doanh cấp xã/phường trong vòng 10 ngày làm việc kể từ ngày bắt đầu kinh doanh.",
+    "expected_context": "ecommerce_startup_02_danh-cho-ho-kinh-doanh-ca-nhan-kinh-doanh.md",
+    "category": "ho_kinh_doanh"
   },
   {
-    "question": "Trường có cung cấp ký túc xá trong khuôn viên không?",
-    "expected_answer": "Không — trường không cung cấp chỗ ở trong khuôn viên, nhưng có đội ngũ hỗ trợ sinh viên tìm chỗ ở gần trường.",
-    "expected_context": "Trang Accommodation Services"
+    "question": "Bán hàng trên TikTok Shop có phải nộp thuế không? Ai chịu trách nhiệm kê khai?",
+    "expected_answer": "Có. Nếu sàn có chức năng đặt hàng trực tuyến và thanh toán, chủ quản nền tảng TMĐT khấu trừ, khai thay và nộp thay thuế theo Nghị định 117/2025/NĐ-CP. Trường hợp ngược lại, hộ/cá nhân kinh doanh tự kê khai theo Nghị định 68/2026/NĐ-CP.",
+    "expected_context": "huong-dan-thue-ho-kinh-doanh-online.pdf, Điều 11 Nghị định 68/2026/NĐ-CP",
+    "category": "thue_tmdt"
+  },
+  {
+    "question": "Ngưỡng doanh thu nào quyết định hộ kinh doanh phải nộp thuế GTGT và TNCN?",
+    "expected_answer": "Hộ kinh doanh có doanh thu năm từ 500 triệu đồng trở xuống thì KHÔNG phải nộp thuế GTGT và TNCN. Trên 500 triệu đồng/năm phải nộp cả thuế GTGT (theo tỷ lệ % trên doanh thu) và thuế TNCN (theo thuế suất).",
+    "expected_context": "ecommerce_startup_02_danh-cho-ho-kinh-doanh-ca-nhan-kinh-doanh.md",
+    "category": "thue_tmdt"
+  },
+  {
+    "question": "Thuế suất thuế TNCN cho hộ kinh doanh có doanh thu năm trên 500 triệu đến 3 tỷ đồng là bao nhiêu?",
+    "expected_answer": "15% (khi áp dụng phương pháp thu nhập tính thuế nhân với thuế suất). Nếu chọn phương pháp nộp thuế trên doanh thu tính thuế thì thuế suất thay đổi theo ngành nghề (0,5% – 5%).",
+    "expected_context": "ecommerce_startup_02_danh-cho-ho-kinh-doanh-ca-nhan-kinh-doanh.md",
+    "category": "thue_tmdt"
+  },
+  {
+    "question": "Công ty cổ phần khác công ty TNHH ở điểm nào cơ bản?",
+    "expected_answer": "Công ty cổ phần có vốn điều lệ chia thành nhiều cổ phần, có thể phát hành cổ phiếu và có từ 3 cổ đông trở lên; công ty TNHH có thể là một thành viên hoặc nhiều thành viên nhưng không phát hành cổ phiếu ra công chúng.",
+    "expected_context": "luat-doanh-nghiep-2020.pdf, Chương II và Chương III",
+    "category": "thanh_lap_doanh_nghiep"
+  },
+  {
+    "question": "Quyền và trách nhiệm của hộ kinh doanh, cá nhân kinh doanh theo Nghị định 68/2026/NĐ-CP gồm những gì?",
+    "expected_answer": "Bao gồm: (1) yêu cầu cơ quan thuế hướng dẫn, giải đáp; (2) có các quyền của người nộp thuế; (3) tự kê khai đầy đủ, chính xác doanh thu; (4) thông báo số tài khoản/ví điện tử cho cơ quan thuế; (5) sử dụng sổ sách kế toán và hóa đơn đúng quy định; (6) cung cấp hồ sơ khi cơ quan thuế kiểm tra.",
+    "expected_context": "huong-dan-thue-ho-kinh-doanh-online.pdf, Điều 13 Nghị định 68/2026/NĐ-CP",
+    "category": "thue_tmdt"
+  },
+  {
+    "question": "Doanh nghiệp nhỏ và vua được hưởng chính sách ưu đãi gì?",
+    "expected_answer": "Được hỗ trợ về thuế (miễn/giảm thuế thu nhập doanh nghiệp), tín dụng (lãi suất ưu đãi), đất đai (miễn/giảm tiền thuê đất), mặt bằng sản xuất, đào tạo nguồn nhân lực và ưu tiên trong các chương trình hỗ trợ của nhà nước.",
+    "expected_context": "ecommerce_startup_01_06-chinh-sach-uu-dai-cho-doanh-nghiep-nho-va-vua-theo-nghi-q.md",
+    "category": "doanh_nghiep_nho_va_vua"
+  },
+  {
+    "question": "Kinh doanh online trên các sàn thương mại điện tử có cần đăng ký kinh doanh không?",
+    "expected_answer": "Có. Cá nhân/tổ chức kinh doanh online trên sàn TMĐT vẫn phải đăng ký hộ kinh doanh hoặc doanh nghiệp tùy quy mô, đồng thời phải đăng ký thuế theo quy định tại Nghị định 68/2026/NĐ-CP.",
+    "expected_context": "ecommerce_startup_03_kinh-doanh-online-tren-cac-san-thuong-mai-dien-tu-co-can-dan.md",
+    "category": "ho_kinh_doanh"
+  },
+  {
+    "question": "Điều kiện hoạt động thương mại điện tử tại Việt Nam theo Nghị định 52/2013 gồm những gì?",
+    "expected_answer": "Thương nhân, tổ chức phải đăng ký website TMĐT bán hàng với Bộ Công Thương (đối với website bán hàng), phải công khai thông tin về tên, địa chỉ, mã số thuế, chính sách bán hàng, đổi trả, giao nhận, và chịu trách nhiệm về hàng hóa/dịch vụ cung cấp.",
+    "expected_context": "nghi-dinh-52-2013-tmdt.pdf",
+    "category": "tmdt"
+  },
+  {
+    "question": "Tiêu chí xác định doanh nghiệp nhỏ và vua mới nhất là gì?",
+    "expected_answer": "Dựa trên 2 tiêu chí: (1) Số lao động bình quân năm (dưới 200 người) và (2) Doanh thu bình quân năm hoặc tổng nguồn vốn. Ngành nông-lâm-ngư nghiệp, công nghiệp-xây dựng có mức vốn/danh thu khác với ngành thương mại-dịch vụ.",
+    "expected_context": "ecommerce_startup_07_tieu-chi-xac-dinh-doanh-nghiep-nho-va-vua-moi-nhat.md",
+    "category": "doanh_nghiep_nho_va_vua"
+  },
+  {
+    "question": "Doanh nghiệp khởi nghiệp sáng tạo là gì? Có chính sách hỗ trợ nào không?",
+    "expected_answer": "Doanh nghiệp khởi nghiệp sáng tạo (startup) là doanh nghiệp thành lập mới nhằm triển khai ý tưởng/dự án sáng tạo, có khả năng tăng trưởng nhanh. Được hỗ trợ đầu tư, cơ chế ưu đãi thuế, tiếp cận quỹ đầu tư mạo hiểm, và các chương trình ươm tạo theo quy định pháp luật.",
+    "expected_context": "ecommerce_startup_04_doanh-nghiep-khoi-nghiep-sang-tao-la-gi-quy-dinh-ve-ho-tro-d.md",
+    "category": "khoi_nghiep_sang_tao"
+  },
+  {
+    "question": "Khi nào hộ kinh doanh phải thực hiện quyết toán thuế TNCN theo năm?",
+    "expected_answer": "Khi có doanh thu năm tổng hợp trên 3 tỷ đồng, hoặc có doanh thu năm trên 500 triệu đồng và lựa chọn khai thuế TNCN theo phương pháp thu nhập tính thuế nhân thuế suất. Hạn nộp quyết toán: chậm nhất 31/3 năm sau.",
+    "expected_context": "huong-dan-thue-ho-kinh-doanh-online.pdf, Điều 11 Nghị định 68/2026/NĐ-CP",
+    "category": "thue_tmdt"
+  },
+  {
+    "question": "Các khoản chi nào được trừ khi xác định thu nhập chịu thuế TNCN của hộ kinh doanh?",
+    "expected_answer": "Được trừ: chi phí nguyên vật liệu, nhân công, khấu hao tài sản cố định, dịch vụ mua ngoài (điện, nước, internet, vận chuyển), trả lãi vay vốn SXKD hợp lý, các chi phí khác phục vụ trực tiếp hoạt động SXKD có hóa đơn chứng từ hợp lệ.",
+    "expected_context": "ecommerce_startup_02_danh-cho-ho-kinh-doanh-ca-nhan-kinh-doanh.md",
+    "category": "thue_tmdt"
+  },
+  {
+    "question": "Cá nhân không cư trú kinh doanh trên nền tảng số có phải thông báo doanh thu không?",
+    "expected_answer": "Cá nhân không cư trú kinh doanh trên nền tảng TMĐT không có chức năng đặt hàng trực tuyến và thanh toán: tự kê khai, nộp thuế theo Nghị định 117/2025/NĐ-CP. Không phải thông báo doanh thu thực tế với cơ quan thuế, không phải quyết toán thuế TNCN.",
+    "expected_context": "huong-dan-thue-ho-kinh-doanh-online.pdf, Điều 11 Khoản 4 Nghị định 68/2026/NĐ-CP",
+    "category": "thue_tmdt"
+  },
+  {
+    "question": "Bán hàng trên Shopee/Lazada/Tiki có phải đăng ký hộ kinh doanh không?",
+    "expected_answer": "Có, nếu kinh doanh thường xuyên có doanh thu vượt ngưỡng phải đăng ký hộ kinh doanh cá thể và đăng ký thuế theo cơ chế một cửa liên thông. Nếu chỉ bán lẻ nhỏ lẻ, thu nhập thấp thì có thể thuộc trường hợp không bắt buộc đăng ký.",
+    "expected_context": "ecommerce_startup_03_kinh-doanh-online-tren-cac-san-thuong-mai-dien-tu-co-can-dan.md",
+    "category": "ho_kinh_doanh"
+  },
+  {
+    "question": "Công ty TNHH hai thành viên trở lên có thể chuyển đổi thành công ty cổ phần không?",
+    "expected_answer": "Có. Theo Luật Doanh nghiệp 2020, công ty TNHH hai thành viên trở lên có quyền chuyển đổi thành công ty cổ phần khi đáp ứng điều kiện về số lượng cổ đông, vốn điều lệ và thực hiện thủ tục đăng ký thay đổi tại cơ quan đăng ký kinh doanh.",
+    "expected_context": "luat-doanh-nghiep-2020.pdf",
+    "category": "thanh_lap_doanh_nghiep"
+  },
+  {
+    "question": "Tỷ lệ % thuế GTGT cho hộ kinh doanh phân phối, cung cấp hàng hóa là bao nhiêu?",
+    "expected_answer": "1% trên doanh thu (áp dụng cho hộ kinh doanh có doanh thu năm trên 500 triệu đồng, tính thuế GTGT theo phương pháp trực tiếp trên doanh thu).",
+    "expected_context": "ecommerce_startup_02_danh-cho-ho-kinh-doanh-ca-nhan-kinh-doanh.md",
+    "category": "thue_tmdt"
+  },
+  {
+    "question": "Hộ kinh doanh có được hoàn thuế không? Điều kiện để được hoàn thuế là gì?",
+    "expected_answer": "Được. Hộ kinh doanh được hoàn thuế GTGT khi có doanh thu tính thuế GTGT nhưng chưa thực hiện khấu trừ thuế, hoặc khi có số thuế GTGT nộp thừa. Cần chuẩn bị hồ sơ theo quy định và nộp tại cơ quan thuế quản lý.",
+    "expected_context": "ecommerce_startup_02_danh-cho-ho-kinh-doanh-ca-nhan-kinh-doanh.md",
+    "category": "thue_tmdt"
+  },
+  {
+    "question": "Điều 78 Luật Doanh nghiệp 2020 quy định về vấn đề gì?",
+    "expected_answer": "Điều 78 Luật Doanh nghiệp 2020 quy định về quyền góp vốn, mua cổ phần và chuyển nhượng phần vốn góp của thành viên trong công ty TNHH hai thành viên trở lên.",
+    "expected_context": "luat-doanh-nghiep-2020.pdf, Điều 78",
+    "category": "thanh_lap_doanh_nghiep"
   }
 ]
