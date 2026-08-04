@@ -32,8 +32,8 @@ trong cùng collection, retrieval sẽ trả về kết quả rác từ dữ li�
 
 from pathlib import Path
 
-STANDARDIZED_DIR = Path(__file__).parent.parent / "data" / "standardized"
-CHROMA_DIR = Path(__file__).parent.parent / "chroma_db"
+STANDARDIZED_DIR = Path(__file__).parent.parent.parent / "data" / "standardized"
+CHROMA_DIR = Path(__file__).parent.parent.parent / "chroma_db"
 
 
 # =============================================================================

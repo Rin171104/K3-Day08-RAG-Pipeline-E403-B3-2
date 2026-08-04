@@ -29,7 +29,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 PAGEINDEX_API_KEY = os.getenv("PAGEINDEX_API_KEY", "")
-STANDARDIZED_DIR = Path(__file__).parent.parent / "data" / "standardized"
+STANDARDIZED_DIR = Path(__file__).parent.parent.parent / "data" / "standardized"
 
 
 def upload_documents():

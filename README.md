@@ -38,7 +38,7 @@ K3-Day08-RAG-Pipeline-Starter/
 ├── README.md
 ├── LAB_GUIDE.md           ← Hướng dẫn chi tiết & Codelab
 ├── checkpoint_timer.html  ← Dashboard đếm ngược Checkpoint & Phân vai
-├── app.py                 ← Streamlit chatbot (bài nhóm)
+├── app.py                 ← Entrypoint Streamlit (gọi Role_3/chatbot_ui.py)
 ├── data/
 │   ├── landing/           ← Task 1 & 2: raw files (PDF, JSON)
 │   └── standardized/      ← Task 3: converted markdown files
@@ -52,6 +52,7 @@ K3-Day08-RAG-Pipeline-Starter/
 │   │   ├── task7_reranking.py
 │   │   └── task9_retrieval_pipeline.py
 │   ├── Role_3_FrontendChatbot/
+│   │   ├── chatbot_ui.py       ← Giao diện Streamlit (app.py chỉ gọi run_app())
 │   │   ├── task2_crawl_news.py
 │   │   ├── task5_semantic_search.py
 │   │   ├── task8_pageindex_vectorless.py

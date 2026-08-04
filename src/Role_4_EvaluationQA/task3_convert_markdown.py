@@ -21,8 +21,8 @@ from pathlib import Path
 
 from markitdown import MarkItDown
 
-LANDING_DIR = Path(__file__).parent.parent / "data" / "landing"
-OUTPUT_DIR = Path(__file__).parent.parent / "data" / "standardized"
+LANDING_DIR = Path(__file__).parent.parent.parent / "data" / "landing"
+OUTPUT_DIR = Path(__file__).parent.parent.parent / "data" / "standardized"
 
 
 def convert_legal_docs():

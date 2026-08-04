@@ -24,7 +24,7 @@ thay vì cố vượt qua, và chỉ dùng nguồn công khai/được phép chi
 
 from pathlib import Path
 
-DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "legal"
+DATA_DIR = Path(__file__).parent.parent.parent / "data" / "landing" / "legal"
 
 
 def setup_directory():
