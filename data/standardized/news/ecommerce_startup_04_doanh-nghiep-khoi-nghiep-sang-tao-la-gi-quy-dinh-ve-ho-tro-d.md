@@ -1,9 +1,7 @@
 # Doanh nghiệp khởi nghiệp sáng tạo là gì? Quy định về hỗ trợ doanh nghiệp khởi nghiệp đổi mới sáng tạo
 
-- **Nguồn:** thuvienphapluat.vn
-- **URL:** https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/tu-van-phap-luat/85103/doanh-nghiep-khoi-nghiep-sang-tao-la-gi-quy-dinh-ve-ho-tro-doanh-nghiep-khoi-nghiep-doi-moi-sang-tao
-- **Crawl lúc:** 2026-08-04T11:46:26.749773
-- **Truy vấn:** chính sách hỗ trợ doanh nghiệp nhỏ và vừa khởi nghiệp sáng tạo
+**Source:** https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/tu-van-phap-luat/85103/doanh-nghiep-khoi-nghiep-sang-tao-la-gi-quy-dinh-ve-ho-tro-doanh-nghiep-khoi-nghiep-doi-moi-sang-tao
+**Crawled:** 2026-08-04T11:46:26.749773
 
 ---
 

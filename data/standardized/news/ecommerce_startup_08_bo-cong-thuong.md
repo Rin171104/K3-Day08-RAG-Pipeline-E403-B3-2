@@ -1,9 +1,7 @@
 # Bộ Công Thương
 
-- **Nguồn:** thuvienphapluat.vn
-- **URL:** https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/tag?keyword=B%E1%BB%99+C%C3%B4ng+Th%C6%B0%C6%A1ng
-- **Crawl lúc:** 2026-08-04T11:46:26.755708
-- **Truy vấn:** thủ tục đăng ký sàn giao dịch thương mại điện tử với Bộ Công Thương
+**Source:** https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/tag?keyword=B%E1%BB%99+C%C3%B4ng+Th%C6%B0%C6%A1ng
+**Crawled:** 2026-08-04T11:46:26.755708
 
 ---
 

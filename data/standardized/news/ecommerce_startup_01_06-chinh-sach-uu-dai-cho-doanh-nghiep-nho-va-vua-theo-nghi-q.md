@@ -1,9 +1,7 @@
 # 06 chính sách ưu đãi cho doanh nghiệp nhỏ và vừa theo Nghị quyết 198
 
-- **Nguồn:** thuvienphapluat.vn
-- **URL:** https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/chinh-sach-moi/85388/06-chinh-sach-uu-dai-cho-doanh-nghiep-nho-va-vua-theo-nghi-quyet-198
-- **Crawl lúc:** 2026-08-04T11:46:26.735927
-- **Truy vấn:** chính sách hỗ trợ doanh nghiệp nhỏ và vừa khởi nghiệp sáng tạo
+**Source:** https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/chinh-sach-moi/85388/06-chinh-sach-uu-dai-cho-doanh-nghiep-nho-va-vua-theo-nghi-quyet-198
+**Crawled:** 2026-08-04T11:46:26.735927
 
 ---
 

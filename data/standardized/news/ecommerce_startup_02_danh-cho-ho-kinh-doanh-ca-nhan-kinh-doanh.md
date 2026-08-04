@@ -1,9 +1,7 @@
 # DÀNH CHO HỘ KINH DOANH CÁ NHÂN KINH DOANH
 
-- **Nguồn:** thuvienphapluat.vn
-- **URL:** https://cdn.thuvienphapluat.vn/uploads/khoinghiep/2026/03/10/SO-TAY-HO-KINH-DOANH.pdf
-- **Crawl lúc:** 2026-08-04T11:46:26.735927
-- **Truy vấn:** nghĩa vụ thuế của cá nhân kinh doanh trên sàn thương mại điện tử
+**Source:** https://cdn.thuvienphapluat.vn/uploads/khoinghiep/2026/03/10/SO-TAY-HO-KINH-DOANH.pdf
+**Crawled:** 2026-08-04T11:46:26.735927
 
 ---
 

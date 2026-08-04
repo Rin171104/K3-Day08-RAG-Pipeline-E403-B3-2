@@ -1,9 +1,7 @@
 # Tổng hợp văn bản quy định về hoạt động thương mại điện tử mới nhất
 
-- **Nguồn:** thuvienphapluat.vn
-- **URL:** https://thuvienphapluat.vn/chu-de-van-ban/108/tong-hop-van-ban-quy-dinh-ve-hoat-dong-thuong-mai-dien-tu-moi-nhat
-- **Crawl lúc:** 2026-08-04T11:46:26.757722
-- **Truy vấn:** nghị định quản lý hoạt động thương mại điện tử
+**Source:** https://thuvienphapluat.vn/chu-de-van-ban/108/tong-hop-van-ban-quy-dinh-ve-hoat-dong-thuong-mai-dien-tu-moi-nhat
+**Crawled:** 2026-08-04T11:46:26.757722
 
 ---
 

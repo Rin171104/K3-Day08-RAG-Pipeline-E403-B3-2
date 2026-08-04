@@ -1,9 +1,7 @@
 # Điều kiện hoạt động thương mại điện tử
 
-- **Nguồn:** thuvienphapluat.vn
-- **URL:** https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/cuoc-chien-loai-bo-giay-phep-con/18943/dieu-kien-hoat-dong-thuong-mai-dien-tu
-- **Crawl lúc:** 2026-08-04T11:46:26.753692
-- **Truy vấn:** quy định đăng ký kinh doanh thương mại điện tử
+**Source:** https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/cuoc-chien-loai-bo-giay-phep-con/18943/dieu-kien-hoat-dong-thuong-mai-dien-tu
+**Crawled:** 2026-08-04T11:46:26.753692
 
 ---
 

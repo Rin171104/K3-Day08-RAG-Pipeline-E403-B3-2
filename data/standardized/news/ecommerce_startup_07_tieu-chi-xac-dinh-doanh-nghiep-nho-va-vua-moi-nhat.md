@@ -1,9 +1,7 @@
 # Tiêu chí xác định doanh nghiệp nhỏ và vừa mới nhất
 
-- **Nguồn:** thuvienphapluat.vn
-- **URL:** https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/tai-chinh/37296/tieu-chi-xac-dinh-doanh-nghiep-nho-va-vua-moi-nhat
-- **Crawl lúc:** 2026-08-04T11:46:26.753692
-- **Truy vấn:** chính sách hỗ trợ doanh nghiệp nhỏ và vừa khởi nghiệp sáng tạo
+**Source:** https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/tai-chinh/37296/tieu-chi-xac-dinh-doanh-nghiep-nho-va-vua-moi-nhat
+**Crawled:** 2026-08-04T11:46:26.753692
 
 ---
 

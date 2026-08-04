@@ -1,9 +1,7 @@
 # thương mại điện tử
 
-- **Nguồn:** thuvienphapluat.vn
-- **URL:** https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/tag?keyword=th%C6%B0%C6%A1ng+m%E1%BA%A1i+%C4%91i%E1%BB%87n+t%E1%BB%AD
-- **Crawl lúc:** 2026-08-04T11:46:26.757722
-- **Truy vấn:** quy định đăng ký kinh doanh thương mại điện tử
+**Source:** https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/tag?keyword=th%C6%B0%C6%A1ng+m%E1%BA%A1i+%C4%91i%E1%BB%87n+t%E1%BB%AD
+**Crawled:** 2026-08-04T11:46:26.757722
 
 ---
 

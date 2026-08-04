@@ -1,9 +1,7 @@
 # Kinh doanh online trên các sàn thương mại điện tử có cần đăng ký kinh doanh không?
 
-- **Nguồn:** thuvienphapluat.vn
-- **URL:** https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/tu-van-phap-luat/79667/kinh-doanh-online-tren-cac-san-thuong-mai-dien-tu-co-can-dang-ky-kinh-doanh-khong
-- **Crawl lúc:** 2026-08-04T11:46:26.747654
-- **Truy vấn:** quy định đăng ký kinh doanh thương mại điện tử
+**Source:** https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/tu-van-phap-luat/79667/kinh-doanh-online-tren-cac-san-thuong-mai-dien-tu-co-can-dang-ky-kinh-doanh-khong
+**Crawled:** 2026-08-04T11:46:26.747654
 
 ---
 
