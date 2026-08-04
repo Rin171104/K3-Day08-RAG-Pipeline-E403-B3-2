@@ -21,7 +21,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "news"
+DATA_DIR = Path(__file__).parent.parent.parent / "data" / "landing" / "news"
 
 
 def setup_directory():
