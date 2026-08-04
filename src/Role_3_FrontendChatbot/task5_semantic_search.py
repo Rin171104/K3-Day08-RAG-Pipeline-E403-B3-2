@@ -45,8 +45,8 @@ def _get_embedding_model():
     """Lazy-load SentenceTransformer (load 1 lần, cache lại)."""
     global _EMBEDDING_MODEL
     if _EMBEDDING_MODEL is None:
-        from sentence_transformers import SentenceModel  # tránh import lúc module load
-        _EMBEDDING_MODEL = SentenceModel(EMBEDDING_MODEL)
+        from sentence_transformers import SentenceTransformer  # tránh import lúc module load
+        _EMBEDDING_MODEL = SentenceTransformer(EMBEDDING_MODEL)
     return _EMBEDDING_MODEL
 
 
