@@ -35,6 +35,13 @@ Tùy theo số lượng thành viên thực tế của từng nhóm (4, 5 hoặc
 * **Role 3 (Frontend & Chatbot Developer)**: Xây dựng giao diện Streamlit `app.py` và nối LLM Generation (Task 10).
 * **Role 4 (Evaluation & QA Engineer)**: Tạo `golden_dataset.json` (15 câu hỏi), thực thi RAGAS `eval_pipeline.py` và viết `results.md`.
 
+| Vai trò | Họ và tên | MSSV | Nhiệm vụ chính |
+| :--- | :--- | :--- | :--- |
+| 👑 **Role 1** | Lại Thế Rin | 2A202601665 | Team Leader & RAG Architect |
+| ⚙️ **Role 2** | Cao Thị Thu Trang | 2A202601885 | Data & Retrieval Specialist |
+| 🎨 **Role 3** | Trần Dương Tuấn | 2A202601271 | Frontend & Chatbot Developer |
+| 📊 **Role 4** | Trương Thảo Nguyên | 2A2026013589 | Evaluation & QA Engineer |
+
 ---
 
 ### 🔹 Phương Án B: Nhóm 5 Thành Viên (Chuyên Sâu Retrieval)
