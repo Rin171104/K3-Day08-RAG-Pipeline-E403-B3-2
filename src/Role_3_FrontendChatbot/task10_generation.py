@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from .task9_retrieval_pipeline import retrieve
+from ..Role_2_DataRetrieval.task9_retrieval_pipeline import retrieve
 
 
 # =============================================================================

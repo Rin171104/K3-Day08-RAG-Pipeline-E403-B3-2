@@ -33,7 +33,7 @@ def semantic_search(query: str, top_k: int = 10) -> list[dict]:
     # Bước 3: Return top_k results
     #
     # Ví dụ với ChromaDB:
-    # from .task4_chunking_indexing import get_collection, get_embedding_model
+    # from ..Role_2_DataRetrieval.task4_chunking_indexing import get_collection, get_embedding_model
     #
     # model = get_embedding_model()
     # query_vector = model.encode(query).tolist()

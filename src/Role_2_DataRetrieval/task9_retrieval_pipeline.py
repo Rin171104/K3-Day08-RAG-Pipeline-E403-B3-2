@@ -25,10 +25,10 @@ Logic:
     điểm số giữa hai nhóm rồi chọn ngưỡng nằm giữa.
 """
 
-from .task5_semantic_search import semantic_search
-from .task6_lexical_search import lexical_search
+from ..Role_3_FrontendChatbot.task5_semantic_search import semantic_search
+from ..Role_4_EvaluationQA.task6_lexical_search import lexical_search
 from .task7_reranking import rerank, rerank_rrf
-from .task8_pageindex_vectorless import pageindex_search
+from ..Role_3_FrontendChatbot.task8_pageindex_vectorless import pageindex_search
 
 
 # =============================================================================

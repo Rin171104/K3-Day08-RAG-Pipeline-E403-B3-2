@@ -35,12 +35,14 @@ Tùy theo số lượng thành viên thực tế của từng nhóm (4, 5 hoặc
 * **Role 3 (Frontend & Chatbot Developer)**: Xây dựng giao diện Streamlit `app.py` và nối LLM Generation (Task 10).
 * **Role 4 (Evaluation & QA Engineer)**: Tạo `golden_dataset.json` (15 câu hỏi), thực thi RAGAS `eval_pipeline.py` và viết `results.md`.
 
-| Vai trò | Họ và tên | MSSV | Nhiệm vụ chính |
-| :--- | :--- | :--- | :--- |
-| 👑 **Role 1** | Lại Thế Rin | 2A202601665 | Team Leader & RAG Architect |
-| ⚙️ **Role 2** | Cao Thị Thu Trang | 2A202601885 | Data & Retrieval Specialist |
-| 🎨 **Role 3** | Trần Dương Tuấn | 2A202601271 | Frontend & Chatbot Developer |
-| 📊 **Role 4** | Trương Thảo Nguyên | 2A2026013589 | Evaluation & QA Engineer |
+| Vai trò | Họ và tên | MSSV | Nhiệm vụ chính | Thư mục làm việc | Task phụ trách |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 👑 **Role 1** | Lại Thế Rin | 2A202601665 | Team Leader & RAG Architect | `src/Role_1_TeamLeader/` | Review + `app.py` + thuyết trình |
+| ⚙️ **Role 2** | Cao Thị Thu Trang | 2A202601885 | Data & Retrieval Specialist | `src/Role_2_DataRetrieval/` | Task 1, 4, 7, 9 |
+| 🎨 **Role 3** | Trần Dương Tuấn | 2A202601271 | Frontend & Chatbot Developer | `src/Role_3_FrontendChatbot/` | Task 2, 5, 8, 10 |
+| 📊 **Role 4** | Trương Thảo Nguyên | 2A2026013589 | Evaluation & QA Engineer | `src/Role_4_EvaluationQA/` + `group_project/evaluation/` | Task 3, 6 + RAGAS |
+
+> 📁 **Lưu ý về cấu trúc `src/`**: mỗi thành viên code trong thư mục riêng của mình. Task 9 (`Role_2`) import chéo từ `Role_3` và `Role_4`, nên Task 5, 6, 7, 8 phải xong trước khi ghép Task 9 ở CP4.
 
 ---
 
@@ -80,7 +82,7 @@ Chia nhỏ các công đoạn dữ liệu và kiểm thử chuyên sâu:
 * 👑 **Role 1 (Team Leader & RAG Architect)**: Kiểm tra phân công nguồn dữ liệu để tránh trùng lặp tài liệu giữa các thành viên.
 * ⚙️ **Role 2 (Data & Pipeline Specialist / Data Dev)**: Thực hiện **Task 1** — Tải $\ge 3$ tài liệu quy định/chính sách gốc (PDF/DOCX) lưu vào `data/landing/legal/`.
 * 🎨 **Role 3 (Frontend & Chatbot Dev)**: Thực hiện **Task 2** — Chạy script crawl $\ge 5$ bài viết/thông báo hướng dẫn lưu vào `data/landing/news/`.
-* 📊 **Role 4 / Role 5 / Role 6 (Evaluation & QA Engineer)**: Thực hiện **Task 3** — Thực thi `python -m src.task3_convert_markdown` chuyển đổi toàn bộ tài liệu sang dạng Markdown trong `data/standardized/`.
+* 📊 **Role 4 / Role 5 / Role 6 (Evaluation & QA Engineer)**: Thực hiện **Task 3** — Thực thi `python -m src.Role_4_EvaluationQA.task3_convert_markdown` chuyển đổi toàn bộ tài liệu sang dạng Markdown trong `data/standardized/`.
 * ✅ **Tiêu chí hoàn thành (Pass Criteria)**: Đủ $\ge 3$ file trong `legal/`, $\ge 5$ file trong `news/`, và đã có các file `.md` tương ứng trong `standardized/`. Coach gọi ngẫu nhiên 1 nhóm demo file Markdown đã convert trong vài phút cuối (`CP1 Passed`).
 
 ---
@@ -88,16 +90,16 @@ Chia nhỏ các công đoạn dữ liệu và kiểm thử chuyên sâu:
 ### 🔹 Checkpoint 2: Chunking, Indexing & Search Cơ Bản — Task 4..6 (0:35 – 1:00 | 25 phút)
 * 👑 **Role 1 (Team Leader & RAG Architect)**: Kiểm tra tham số chunking (`CHUNK_SIZE=800`, `CHUNK_OVERLAP=100`) và xác nhận việc sử dụng embedding model `BAAI/bge-m3`.
 * ⚙️ **Role 2 (Data & Dense Search Dev)**: Thực hiện **Task 4** — Cắt đoạn văn bản, gọi model embedding và tạo cơ sở dữ liệu vector ChromaDB (`chroma_db/`).
-* 🎨 **Role 3 (Sparse Search Dev / UI Dev)**: Thực hiện **Task 5** — Hoàn thiện hàm `semantic_search()` trong `src/task5_semantic_search.py` (Dense Retrieval dựa trên Cosine Similarity & HyDE).
-* 📊 **Role 4 / Role 5 / Role 6 (Evaluation & QA Engineer)**: Thực hiện **Task 6** — Hoàn thiện hàm `lexical_search()` trong `src/task6_lexical_search.py` (Sparse Retrieval sử dụng BM25 & TF-IDF).
+* 🎨 **Role 3 (Sparse Search Dev / UI Dev)**: Thực hiện **Task 5** — Hoàn thiện hàm `semantic_search()` trong `src/Role_3_FrontendChatbot/task5_semantic_search.py` (Dense Retrieval dựa trên Cosine Similarity & HyDE).
+* 📊 **Role 4 / Role 5 / Role 6 (Evaluation & QA Engineer)**: Thực hiện **Task 6** — Hoàn thiện hàm `lexical_search()` trong `src/Role_4_EvaluationQA/task6_lexical_search.py` (Sparse Retrieval sử dụng BM25 & TF-IDF).
 * ✅ **Tiêu chí hoàn thành (Pass Criteria)**: Khởi tạo xong `chroma_db/`; chạy `pytest tests/test_individual.py` vượt qua các kiểm thử của Task 4, 5, 6. Coach gọi ngẫu nhiên demo so sánh Semantic Search vs Lexical BM25 trong vài phút cuối (`CP2 Passed`).
 
 ---
 
 ### 🔹 Checkpoint 3: Reranking & Vectorless Fallback — Task 7..8 (1:00 – 1:20 | 20 phút)
 * 👑 **Role 1 (Team Leader & RAG Architect)**: Kiểm tra công thức gộp thứ hạng RRF ($k=60$) đảm bảo cân bằng giữa kết quả Semantic và BM25.
-* ⚙️ **Role 2 (Pipeline Specialist / Sparse Dev)**: Thực hiện **Task 7** — Hoàn thiện hàm `rerank_rrf()` trong `src/task7_reranking.py`.
-* 🎨 **Role 3 (Frontend & Chatbot Dev)**: Thực hiện **Task 8** — Tích hợp SDK PageIndex trong `src/task8_pageindex_vectorless.py` để xử lý truy vấn trên văn bản dạng cấu trúc.
+* ⚙️ **Role 2 (Pipeline Specialist / Sparse Dev)**: Thực hiện **Task 7** — Hoàn thiện hàm `rerank_rrf()` trong `src/Role_2_DataRetrieval/task7_reranking.py`.
+* 🎨 **Role 3 (Frontend & Chatbot Dev)**: Thực hiện **Task 8** — Tích hợp SDK PageIndex trong `src/Role_3_FrontendChatbot/task8_pageindex_vectorless.py` để xử lý truy vấn trên văn bản dạng cấu trúc.
 * 📊 **Role 4 / Role 5 / Role 6 (Evaluation & QA Engineer)**: Thử nghiệm các câu hỏi ngoài domain để kiểm tra khả năng kích hoạt fallback của hệ thống.
 * ✅ **Tiêu chí hoàn thành (Pass Criteria)**: Thuật toán RRF rerank gộp thành công kết quả từ 2 ranker; PageIndex trả về kết quả truy vấn phù hợp. Coach gọi ngẫu nhiên 1 nhóm trình bày logic RRF & bẫy điều kiện Fallback (Cosine $< 0.48$) trong vài phút cuối (`CP3 Passed`).
 
@@ -105,8 +107,8 @@ Chia nhỏ các công đoạn dữ liệu và kiểm thử chuyên sâu:
 
 ### 🔹 Checkpoint 4: Pipeline Hoàn Chỉnh & Generation — Task 9..10 (1:20 – 1:45 | 25 phút)
 * 👑 **Role 1 (Team Leader & RAG Architect)**: Kiểm tra toàn bộ mã nguồn bài cá nhân, chạy `pytest tests/test_individual.py` để xác nhận thành viên đạt đủ điểm bài cá nhân.
-* ⚙️ **Role 2 (Data & Pipeline Specialist)**: Hoàn thiện **Task 9** (`src/task9_retrieval_pipeline.py`) — Nối chuỗi Semantic + BM25 + RRF + PageIndex Fallback khi điểm Cosine $< 0.48$.
-* 🎨 **Role 3 (Frontend & Chatbot Dev)**: Hoàn thiện **Task 10** (`src/task10_generation.py`) — Áp dụng kỹ thuật Reordering (`front + back[::-1]`) và gọi LLM sinh câu trả lời có trích dẫn nguồn.
+* ⚙️ **Role 2 (Data & Pipeline Specialist)**: Hoàn thiện **Task 9** (`src/Role_2_DataRetrieval/task9_retrieval_pipeline.py`) — Nối chuỗi Semantic + BM25 + RRF + PageIndex Fallback khi điểm Cosine $< 0.48$.
+* 🎨 **Role 3 (Frontend & Chatbot Dev)**: Hoàn thiện **Task 10** (`src/Role_3_FrontendChatbot/task10_generation.py`) — Áp dụng kỹ thuật Reordering (`front + back[::-1]`) và gọi LLM sinh câu trả lời có trích dẫn nguồn.
 * 📊 **Role 4 / Role 5 / Role 6 (Evaluation & QA Engineer)**: Rà soát định dạng trích dẫn nguồn (citation format) trong câu trả lời từ LLM.
 * ✅ **Tiêu chí hoàn thành (Pass Criteria)**: Chạy `pytest tests/test_individual.py` đạt **35/35 test passed** (Hoàn thành 50 điểm cá nhân). Coach chốt mốc điểm cá nhân & hỗ trợ gỡ lỗi trực tiếp trong vài phút cuối (`CP4 Passed`).
 
@@ -137,11 +139,11 @@ Chia nhỏ các công đoạn dữ liệu và kiểm thử chuyên sâu:
 - **Lưu ý**: Nếu trang nguồn cấu hình chặn tự động (HTTP 403), có thể sử dụng bộ dữ liệu mẫu sẵn có trong bài lab hoặc lựa chọn trang công khai khác.
 
 ### Task 3 — Chuẩn Hoá Văn Bản Sang Markdown
-- **Nhiệm vụ**: Chạy `python src/task3_convert_markdown.py`.
+- **Nhiệm vụ**: Chạy `python src/Role_4_EvaluationQA/task3_convert_markdown.py`.
 - **Mục tiêu**: Tất cả văn bản dạng PDF/DOCX/JSON/HTML được chuyển đổi thành `.md` trong thư mục `data/standardized/`.
 
 ### Task 4 — Chunking & Indexing
-- **Nhiệm vụ**: Chạy `python src/task4_chunking_indexing.py`.
+- **Nhiệm vụ**: Chạy `python src/Role_2_DataRetrieval/task4_chunking_indexing.py`.
 - **Mục tiêu**: Phân đoạn văn bản (size=800, overlap=100), chuyển đổi sang dạng vector với model `BAAI/bge-m3` và lưu trữ vào `chroma_db/`.
 
 ### Task 5 & 6 — Semantic Search & Lexical Search (BM25)

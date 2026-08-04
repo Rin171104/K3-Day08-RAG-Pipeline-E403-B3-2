@@ -93,7 +93,7 @@ Chia nhỏ các công đoạn dữ liệu và kiểm thử chuyên sâu:
 * 👑 **Role 1 (Team Leader & RAG Architect)**: Kiểm tra phân công nguồn dữ liệu để tránh trùng lặp tài liệu giữa các thành viên.
 * ⚙️ **Role 2 (Data & Pipeline Specialist / Data Dev)**: Thực hiện **Task 1** — Tải $\ge 3$ tài liệu quy định/chính sách gốc (PDF/DOCX) lưu vào `data/landing/legal/`.
 * 🎨 **Role 3 (Frontend & Chatbot Dev)**: Thực hiện **Task 2** — Chạy script crawl $\ge 5$ bài viết/thông báo hướng dẫn lưu vào `data/landing/news/`.
-* 📊 **Role 4 / Role 5 / Role 6 (Evaluation & QA Engineer)**: Thực hiện **Task 3** — Thực thi `python -m src.task3_convert_markdown` chuyển đổi toàn bộ tài liệu sang dạng Markdown trong `data/standardized/`.
+* 📊 **Role 4 / Role 5 / Role 6 (Evaluation & QA Engineer)**: Thực hiện **Task 3** — Thực thi `python -m src.Role_4_EvaluationQA.task3_convert_markdown` chuyển đổi toàn bộ tài liệu sang dạng Markdown trong `data/standardized/`.
 * ✅ **Tiêu chí hoàn thành (Pass Criteria)**: Đủ $\ge 3$ file trong `legal/`, $\ge 5$ file trong `news/`, và đã có các file `.md` tương ứng trong `standardized/` (`CP1 Passed`).
 
 ---
@@ -101,16 +101,16 @@ Chia nhỏ các công đoạn dữ liệu và kiểm thử chuyên sâu:
 ### 🔹 Checkpoint 2: Chunking, Indexing & Search Cơ Bản — Task 4..6 (0:35 – 1:00)
 * 👑 **Role 1 (Team Leader & RAG Architect)**: Kiểm tra tham số chunking (`CHUNK_SIZE=800`, `CHUNK_OVERLAP=100`) và xác nhận việc sử dụng embedding model `BAAI/bge-m3`.
 * ⚙️ **Role 2 (Data & Dense Search Dev)**: Thực hiện **Task 4** — Cắt đoạn văn bản, gọi model embedding và tạo cơ sở dữ liệu vector ChromaDB (`chroma_db/`).
-* 🎨 **Role 3 (Sparse Search Dev / UI Dev)**: Thực hiện **Task 5** — Hoàn thiện hàm `semantic_search()` trong `src/task5_semantic_search.py` (Dense Retrieval dựa trên Cosine Similarity & HyDE).
-* 📊 **Role 4 / Role 5 / Role 6 (Evaluation & QA Engineer)**: Thực hiện **Task 6** — Hoàn thiện hàm `lexical_search()` trong `src/task6_lexical_search.py` (Sparse Retrieval sử dụng BM25 & TF-IDF).
+* 🎨 **Role 3 (Sparse Search Dev / UI Dev)**: Thực hiện **Task 5** — Hoàn thiện hàm `semantic_search()` trong `src/Role_3_FrontendChatbot/task5_semantic_search.py` (Dense Retrieval dựa trên Cosine Similarity & HyDE).
+* 📊 **Role 4 / Role 5 / Role 6 (Evaluation & QA Engineer)**: Thực hiện **Task 6** — Hoàn thiện hàm `lexical_search()` trong `src/Role_4_EvaluationQA/task6_lexical_search.py` (Sparse Retrieval sử dụng BM25 & TF-IDF).
 * ✅ **Tiêu chí hoàn thành (Pass Criteria)**: Khởi tạo xong `chroma_db/`; chạy `pytest tests/test_individual.py` vượt qua các kiểm thử của Task 4, 5, 6 (`CP2 Passed`).
 
 ---
 
 ### 🔹 Checkpoint 3: Reranking & Vectorless Fallback — Task 7..8 (1:00 – 1:20)
 * 👑 **Role 1 (Team Leader & RAG Architect)**: Kiểm tra công thức gộp thứ hạng RRF ($k=60$) đảm bảo cân bằng giữa kết quả Semantic và BM25.
-* ⚙️ **Role 2 (Pipeline Specialist / Sparse Dev)**: Thực hiện **Task 7** — Hoàn thiện hàm `rerank_rrf()` trong `src/task7_reranking.py`.
-* 🎨 **Role 3 (Frontend & Chatbot Dev)**: Thực hiện **Task 8** — Tích hợp SDK PageIndex trong `src/task8_pageindex_vectorless.py` để xử lý truy vấn trên văn bản dạng cấu trúc.
+* ⚙️ **Role 2 (Pipeline Specialist / Sparse Dev)**: Thực hiện **Task 7** — Hoàn thiện hàm `rerank_rrf()` trong `src/Role_2_DataRetrieval/task7_reranking.py`.
+* 🎨 **Role 3 (Frontend & Chatbot Dev)**: Thực hiện **Task 8** — Tích hợp SDK PageIndex trong `src/Role_3_FrontendChatbot/task8_pageindex_vectorless.py` để xử lý truy vấn trên văn bản dạng cấu trúc.
 * 📊 **Role 4 / Role 5 / Role 6 (Evaluation & QA Engineer)**: Thử nghiệm các câu hỏi ngoài domain để kiểm tra khả năng kích hoạt fallback của hệ thống.
 * ✅ **Tiêu chí hoàn thành (Pass Criteria)**: Thuật toán RRF rerank gộp thành công kết quả từ 2 ranker; PageIndex trả về kết quả truy vấn phù hợp (`CP3 Passed`).
 
@@ -118,8 +118,8 @@ Chia nhỏ các công đoạn dữ liệu và kiểm thử chuyên sâu:
 
 ### 🔹 Checkpoint 4: Pipeline Hoàn Chỉnh & Generation — Task 9..10 (1:20 – 1:45)
 * 👑 **Role 1 (Team Leader & RAG Architect)**: Kiểm tra toàn bộ mã nguồn bài cá nhân, chạy `pytest tests/test_individual.py` để xác nhận thành viên đạt đủ điểm bài cá nhân.
-* ⚙️ **Role 2 (Data & Pipeline Specialist)**: Hoàn thiện **Task 9** (`src/task9_retrieval_pipeline.py`) — Nối chuỗi Semantic + BM25 + RRF + PageIndex Fallback khi điểm Cosine $< 0.48$.
-* 🎨 **Role 3 (Frontend & Chatbot Dev)**: Hoàn thiện **Task 10** (`src/task10_generation.py`) — Áp dụng kỹ thuật Reordering (`front + back[::-1]`) và gọi LLM sinh câu trả lời có trích dẫn nguồn.
+* ⚙️ **Role 2 (Data & Pipeline Specialist)**: Hoàn thiện **Task 9** (`src/Role_2_DataRetrieval/task9_retrieval_pipeline.py`) — Nối chuỗi Semantic + BM25 + RRF + PageIndex Fallback khi điểm Cosine $< 0.48$.
+* 🎨 **Role 3 (Frontend & Chatbot Dev)**: Hoàn thiện **Task 10** (`src/Role_3_FrontendChatbot/task10_generation.py`) — Áp dụng kỹ thuật Reordering (`front + back[::-1]`) và gọi LLM sinh câu trả lời có trích dẫn nguồn.
 * 📊 **Role 4 / Role 5 / Role 6 (Evaluation & QA Engineer)**: Rà soát định dạng trích dẫn nguồn (citation format) trong câu trả lời từ LLM.
 * ✅ **Tiêu chí hoàn thành (Pass Criteria)**: Chạy `pytest tests/test_individual.py` đạt **35/35 test passed** (Hoàn thành 50 điểm cá nhân) (`CP4 Passed`).
 
@@ -152,9 +152,9 @@ không cần thêm slot review riêng.
 | Checkpoint | Thời gian | Mục tiêu phải đạt | File nộp / Kiểm tra |
 | :--- | :---: | :--- | :--- |
 | **CP0** 🟦 | 0:00–0:10 (10m) | Cài xong môi trường venv, có file `.env` chứa API Key | `pip install -r requirements.txt` |
-| **CP1** 🟦 | 0:10–0:35 (25m) | Có $\ge 3$ PDF trong `legal/`, $\ge 5$ JSON trong `news/` và convert sang `.md` | `python -m src.task3_convert_markdown` |
-| **CP2** 🟩 | 0:35–1:00 (25m) | Cắt đoạn văn bản, lưu ChromaDB, chạy thử Semantic & BM25 | `python -m src.task4_chunking_indexing` |
-| **CP3** 🟩 | 1:00–1:20 (20m) | Viết thuật toán RRF Rerank gộp thứ hạng & tích hợp PageIndex | `python -m src.task7_reranking` |
+| **CP1** 🟦 | 0:10–0:35 (25m) | Có $\ge 3$ PDF trong `legal/`, $\ge 5$ JSON trong `news/` và convert sang `.md` | `python -m src.Role_4_EvaluationQA.task3_convert_markdown` |
+| **CP2** 🟩 | 0:35–1:00 (25m) | Cắt đoạn văn bản, lưu ChromaDB, chạy thử Semantic & BM25 | `python -m src.Role_2_DataRetrieval.task4_chunking_indexing` |
+| **CP3** 🟩 | 1:00–1:20 (20m) | Viết thuật toán RRF Rerank gộp thứ hạng & tích hợp PageIndex | `python -m src.Role_2_DataRetrieval.task7_reranking` |
 | **CP4** 🟩 | 1:20–1:45 (25m) | **Mốc cá nhân 50đ**: Chạy Pytest đạt 35/35 PASSED | `python -m pytest tests/test_individual.py -v` |
 | **CP5** 🟧 | 1:45–2:15 (30m) | **Mốc bài nhóm 50đ**: Chạy Chatbot Streamlit + Đánh giá RAGAS | `streamlit run app.py` |
 | **CP6** 🟦 | 2:15–3:00 (45m) | **Thuyết trình Live Demo các nhóm (45 phút)** & Push code GitHub | `git push origin main` |
@@ -168,7 +168,7 @@ không cần thêm slot review riêng.
 - ❓ **Tại sao phải làm bước này?**: Các mô hình LLM chung (như GPT-4 hay Ling-Flash) không hề biết quy định nội bộ của từng trường đại học hay doanh nghiệp. Thu thập dữ liệu thực tế là bước bắt buộc để tạo "kho tri thức chuẩn" (Ground Truth) cho AI tra cứu.
 - 🛠️ **Cách làm**:
   - **Task 1**: Tải $\ge 3$ file PDF chính sách (Học phí, Học bổng, Ký túc xá...) lưu vào `data/landing/legal/`.
-  - **Task 2**: Chạy `python src/task2_crawl_news.py` để crawl $\ge 5$ bài tin tức lưu vào `data/landing/news/`.
+  - **Task 2**: Chạy `python src/Role_3_FrontendChatbot/task2_crawl_news.py` để crawl $\ge 5$ bài tin tức lưu vào `data/landing/news/`.
 - ⚡ **Mẹo tiết kiệm thời gian**: Nếu trang web bị chặn bot (Lỗi HTTP 403), bạn có thể dùng ngay bộ dữ liệu mẫu 11 file có sẵn trong repo!
 
 ---
@@ -176,7 +176,7 @@ không cần thêm slot review riêng.
 ### 🔹 Task 3: Chuyển Đổi Dữ Liệu Sang Markdown Standardized
 - 💡 **Ý tưởng cốt lõi**: Chuyển đổi toàn bộ PDF/DOCX/JSON sang định dạng chuẩn thuần văn bản Markdown (`.md`).
 - ❓ **Tại sao phải làm bước này?**: File PDF gốc chứa rất nhiều mã định dạng hiển thị phức tạp, hình ảnh, header/footer rác khiến LLM và các bộ phân đoạn (Text Splitter) bị nhiễu. Định dạng Markdown giúp giữ nguyên cấu trúc tiêu đề (`#`, `##`) và danh sách một cách sạch sẽ nhất.
-- 🛠️ **Cách làm**: Chạy lệnh `python src/task3_convert_markdown.py`.
+- 🛠️ **Cách làm**: Chạy lệnh `python src/Role_4_EvaluationQA/task3_convert_markdown.py`.
 - ✅ **Kiểm tra**: Xem thư mục `data/standardized/legal/` và `news/` đã xuất hiện các file `.md` tương ứng chưa.
 
 ---
@@ -187,7 +187,7 @@ không cần thêm slot review riêng.
   1. **Tại sao cắt 800 ký tự?**: Nếu đưa cả file 50 trang vào LLM sẽ rất tốn chi phí và làm LLM bị loãng thông tin.
   2. **Tại sao Overlap 100 ký tự?**: Tránh việc câu văn quan trọng bị cắt đôi ngay ở ranh giới giữa 2 đoạn.
   3. **Tại sao dùng ChromaDB?**: ChromaDB hỗ trợ truy vấn vector theo độ tương đồng Cosine chỉ trong vài miligiây thay vì phải quét thủ công từng file text.
-- 🛠️ **Cách làm**: Chạy lệnh `python src/task4_chunking_indexing.py`.
+- 🛠️ **Cách làm**: Chạy lệnh `python src/Role_2_DataRetrieval/task4_chunking_indexing.py`.
 
 ---
 
@@ -199,28 +199,28 @@ không cần thêm slot review riêng.
   - Semantic Search giỏi tìm câu từ đồng nghĩa nhưng hay bỏ sót các từ khoá đặc biệt như số hiệu văn bản (*"Quyết định 456"*).
   - BM25 giỏi tìm từ khoá chính xác nhưng dốt khi người dùng dùng từ ngữ khác với tài liệu.
   - Kết hợp cả hai giúp hệ thống bù trừ khuyết điểm cho nhau (Hybrid Retrieval).
-- 🛠️ **Cách làm**: Mở file `src/task5_semantic_search.py` và `src/task6_lexical_search.py` hoàn thiện hàm theo hướng dẫn.
+- 🛠️ **Cách làm**: Mở file `src/Role_3_FrontendChatbot/task5_semantic_search.py` và `src/Role_4_EvaluationQA/task6_lexical_search.py` hoàn thiện hàm theo hướng dẫn.
 
 ---
 
 ### 🔹 Task 7: Gộp Thứ Hạng Reranking (RRF)
 - 💡 **Ý tưởng cốt lõi**: Áp dụng thuật toán Reciprocal Rank Fusion $RRF(d) = \sum \frac{1}{60 + r(d)}$ để gộp thứ hạng từ Semantic Search và BM25.
 - ❓ **Tại sao phải làm bước này?**: Điểm Cosine Similarity nằm trong khoảng `[0, 1]`, trong khi điểm BM25 là điểm thô không giới hạn (có thể từ `0` đến `20+`). Bạn **KHÔNG THỂ cộng trực tiếp hai loại điểm này**. Thuật toán RRF giải quyết vấn đề bằng cách chỉ dựa vào **thứ hạng (rank)** của đoạn văn trong từng danh sách để gộp điểm một cách công bằng.
-- 🛠️ **Cách làm**: Chạy `python src/task7_reranking.py`.
+- 🛠️ **Cách làm**: Chạy `python src/Role_2_DataRetrieval/task7_reranking.py`.
 
 ---
 
 ### 🔹 Task 8: Vectorless RAG với PageIndex (Fallback)
 - 💡 **Ý tưởng cốt lõi**: Tích hợp PageIndex SDK để truy vấn tài liệu theo cấu trúc Mục Lục (Tree Hierarchy) mà không qua chia nhỏ (chunking).
 - ❓ **Tại sao phải làm bước này?**: Khi người dùng hỏi các câu hỏi mang tính tổng quan như *"Tóm tắt toàn bộ quy trình xin học bổng?"*, việc chia nhỏ thành các đoạn 800 ký tự sẽ làm mất đi bức tranh toàn cảnh của tài liệu. PageIndex giúp đọc hiểu cấu trúc chương/mục lớn để trả lời các câu hỏi tổng hợp.
-- 🛠️ **Cách làm**: Điền `PAGEINDEX_API_KEY` vào `.env` và hoàn thiện `src/task8_pageindex_vectorless.py`.
+- 🛠️ **Cách làm**: Điền `PAGEINDEX_API_KEY` vào `.env` và hoàn thiện `src/Role_3_FrontendChatbot/task8_pageindex_vectorless.py`.
 
 ---
 
 ### 🔹 Task 9: Nối Chuỗi Retrieval Pipeline Hoàn Chỉnh
 - 💡 **Ý tưởng cốt lõi**: Nối chuỗi Semantic + BM25 $\rightarrow$ RRF Rerank. Nếu điểm Cosine gốc tốt nhất $< 0.48 \rightarrow$ Tự động chuyển sang PageIndex Fallback.
 - ❓ **Tại sao phải chọn ngưỡng 0.48?**: Khi điểm Cosine Similarity tốt nhất $< 0.48$, điều đó chứng tỏ trong cơ sở dữ liệu ChromaDB **không có đoạn văn nào thực sự liên quan đến câu hỏi**. Nếu cố tình đưa đoạn rác cho LLM, LLM sẽ trả lời sai hoặc chém gió. Lúc này tự động chuyển sang PageIndex Fallback là giải pháp an toàn nhất.
-- 🛠️ **Cách làm**: Hoàn thiện hàm `retrieve()` trong `src/task9_retrieval_pipeline.py`.
+- 🛠️ **Cách làm**: Hoàn thiện hàm `retrieve()` trong `src/Role_2_DataRetrieval/task9_retrieval_pipeline.py`.
 - 🚨 **BẪY QUAN TRỌNG**: So sánh điểm Cosine gốc `dense_results[0]['score'] < 0.48`, **KHÔNG** so sánh với điểm RRF đã gộp (điểm RRF luôn rất nhỏ ~0.016)!
 
 ---
@@ -232,7 +232,7 @@ không cần thêm slot review riêng.
 - ❓ **Tại sao phải làm bước này?**:
   - **Tại sao phải Reorder?**: Theo nghiên cứu *Lost in the Middle (Liu et al. 2023)*, LLM chú ý rất mạnh vào thông tin nằm ở **đầu** và **cuối** prompt, nhưng ngó lơ thông tin nằm ở **giữa**. Xếp đoạn quan trọng nhất vào đầu và cuối giúp LLM không bỏ sót dữ liệu.
   - **Tại sao phải ép Citation?**: Trích dẫn nguồn giúp kiểm chứng câu trả lời, minh bạch thông tin và ngăn chặn AI bịa đặt.
-- 🛠️ **Cách làm**: Chạy `python -m src.task10_generation` (từ thư mục gốc repo, không cd vào src/).
+- 🛠️ **Cách làm**: Chạy `python -m src.Role_3_FrontendChatbot.task10_generation` (từ thư mục gốc repo, không cd vào src/).
 - 🎯 **KIỂM TRA HOÀN THÀNH BÀI CÁ NHÂN**: Chạy lệnh `pytest tests/test_individual.py -v`. Khi màn hình báo **`35 passed`** là bạn đã đạt **50/50 điểm cá nhân**!
 
 ---

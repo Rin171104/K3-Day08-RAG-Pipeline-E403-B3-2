@@ -27,7 +27,7 @@ Xây dựng một RAG pipeline thực tế, end-to-end, từ thu thập dữ li�
 
 **Chính sách/quy định dịch vụ đại học** (học phí, học bổng, ký túc xá, đăng ký học phần) + **Thông tin/thông báo đại học** (sự kiện, dịch vụ thư viện, hỗ trợ sinh viên)
 
-Dữ liệu mẫu trong repo được crawl thật từ trang công khai của **RMIT Vietnam** (rmit.edu.vn) — xem chi tiết URL nguồn trong `src/task1_collect_legal_docs.py` và `src/task2_crawl_news.py`.
+Dữ liệu mẫu trong repo được crawl thật từ trang công khai của **RMIT Vietnam** (rmit.edu.vn) — xem chi tiết URL nguồn trong `src/Role_2_DataRetrieval/task1_collect_legal_docs.py` và `src/Role_3_FrontendChatbot/task2_crawl_news.py`.
 
 ---
 
@@ -42,19 +42,23 @@ K3-Day08-RAG-Pipeline-Starter/
 ├── data/
 │   ├── landing/           ← Task 1 & 2: raw files (PDF, JSON)
 │   └── standardized/      ← Task 3: converted markdown files
-├── src/
+├── src/                   ← Chia theo vai trò, mỗi Role một thư mục con
 │   ├── __init__.py
-│   ├── task1_collect_legal_docs.py
-│   ├── task2_crawl_news.py
-│   ├── task3_convert_markdown.py
-│   ├── task4_chunking_indexing.py
-│   ├── task5_semantic_search.py
-│   ├── task6_lexical_search.py
-│   ├── task7_reranking.py
-│   ├── task8_pageindex_vectorless.py
-│   ├── task9_retrieval_pipeline.py
-│   ├── task10_generation.py
-│   └── supervisor.py      ← Pattern nâng cao: Supervisor + Workers song song
+│   ├── Role_1_TeamLeader/         ← Điều phối, review, ghép code (không có file task)
+│   │   └── README.md
+│   ├── Role_2_DataRetrieval/
+│   │   ├── task1_collect_legal_docs.py
+│   │   ├── task4_chunking_indexing.py
+│   │   ├── task7_reranking.py
+│   │   └── task9_retrieval_pipeline.py
+│   ├── Role_3_FrontendChatbot/
+│   │   ├── task2_crawl_news.py
+│   │   ├── task5_semantic_search.py
+│   │   ├── task8_pageindex_vectorless.py
+│   │   └── task10_generation.py
+│   └── Role_4_EvaluationQA/
+│       ├── task3_convert_markdown.py
+│       └── task6_lexical_search.py
 ├── chroma_db/             ← Task 4: vector store đã index (sinh ra khi chạy, không tự viết tay)
 ├── tests/
 │   └── test_individual.py ← Chấm điểm phần Task 1-10 (pytest)

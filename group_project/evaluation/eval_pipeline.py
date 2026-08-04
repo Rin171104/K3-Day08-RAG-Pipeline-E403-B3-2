@@ -209,7 +209,7 @@ if __name__ == "__main__":
     print(f"Loaded {len(golden_dataset)} test cases")
 
     # TODO: Import your RAG pipeline
-    # from src.task10_generation import generate_with_citation
+    # from src.Role_3_FrontendChatbot.task10_generation import generate_with_citation
     #
     # Chọn 1 framework:
     # results = evaluate_with_deepeval(pipeline, golden_dataset)

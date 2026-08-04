@@ -635,7 +635,7 @@
         badge: "CHECKPOINT 1",
         title: "Thu Thập & Chuẩn Hoá Dữ Liệu (Task 1–3)",
         durationMinutes: 25,
-        quickCmd: "python -m src.task1_collect_legal_docs\npython -m src.task2_crawl_news\npython -m src.task3_convert_markdown",
+        quickCmd: "python -m src.Role_2_DataRetrieval.task1_collect_legal_docs\npython -m src.Role_3_FrontendChatbot.task2_crawl_news\npython -m src.Role_4_EvaluationQA.task3_convert_markdown",
         passCriteria: "Đủ >=3 file PDF/DOCX trong data/landing/legal/, >=5 file tin tức trong news/ và đã convert sang .md. (Cuối CP: Gọi ngẫu nhiên demo file .md & chia sẻ kinh nghiệm 5 phút).",
         roles: {
           4: [
@@ -649,19 +649,19 @@
               role: "Role 2", name: "Data & Retrieval Specialist", badgeClass: "badge-r2",
               goal: "Task 1 — Tải >=3 file PDF/DOCX quy định gốc",
               steps: ["Tìm văn bản chính sách (Học phí, Đổi trả...)", "Đặt tên file không dấu rõ ràng", "Hoàn thành hàm download_file() trong task1", "Lưu file vào data/landing/legal/"],
-              file: "src/task1_collect_legal_docs.py", gotcha: "Đặt tên file rõ ràng: tuition-fees.pdf."
+              file: "src/Role_2_DataRetrieval/task1_collect_legal_docs.py", gotcha: "Đặt tên file rõ ràng: tuition-fees.pdf."
             },
             {
               role: "Role 3", name: "Frontend & Chatbot Dev", badgeClass: "badge-r3",
               goal: "Task 2 — Crawl >=5 bài tin tức/thông báo",
               steps: ["Dùng Crawl4AI hoặc requests crawl bài viết", "Lưu mỗi bài thành 1 file .json chứa metadata", "Ghi rõ url, title, crawl_date, content", "Lưu file vào data/landing/news/"],
-              file: "src/task2_crawl_news.py", gotcha: "Mỗi bài báo lưu thành 1 file JSON chứa metadata."
+              file: "src/Role_3_FrontendChatbot/task2_crawl_news.py", gotcha: "Mỗi bài báo lưu thành 1 file JSON chứa metadata."
             },
             {
               role: "Role 4", name: "Evaluation & QA Engineer", badgeClass: "badge-r4",
               goal: "Task 3 — Convert toàn bộ sang Markdown",
               steps: ["Dùng MarkItDown convert PDF/DOCX/JSON", "Lưu file .md vào data/standardized/legal/ & news/", "Chạy pytest tests/test_individual.py test Task 1-3"],
-              file: "src/task3_convert_markdown.py", gotcha: "Thiếu extra PDF báo MissingDependencyException."
+              file: "src/Role_4_EvaluationQA/task3_convert_markdown.py", gotcha: "Thiếu extra PDF báo MissingDependencyException."
             }
           ],
           5: [
@@ -675,13 +675,13 @@
               role: "Role 2", name: "Data & Dense Search Dev", badgeClass: "badge-r2",
               goal: "Task 1 — Thu thập văn bản chính sách PDF",
               steps: ["Tải 3+ file PDF/DOCX chính sách", "Chạy task1_collect_legal_docs.py"],
-              file: "src/task1_collect_legal_docs.py", gotcha: "File PDF phải >1KB."
+              file: "src/Role_2_DataRetrieval/task1_collect_legal_docs.py", gotcha: "File PDF phải >1KB."
             },
             {
               role: "Role 3", name: "Sparse & Rerank Dev", badgeClass: "badge-r3",
               goal: "Task 2 — Crawl 5+ bài viết tin tức/thông báo",
               steps: ["Chạy task2_crawl_news.py dùng Crawl4AI", "Kiểm tra output JSON trong news/"],
-              file: "src/task2_crawl_news.py", gotcha: "Lưu đủ metadata URL và ngày crawl."
+              file: "src/Role_3_FrontendChatbot/task2_crawl_news.py", gotcha: "Lưu đủ metadata URL và ngày crawl."
             },
             {
               role: "Role 4", name: "Frontend & Chatbot Dev", badgeClass: "badge-r4",
@@ -693,7 +693,7 @@
               role: "Role 5", name: "Evaluation & QA Engineer", badgeClass: "badge-r5",
               goal: "Task 3 — Convert toàn bộ sang Markdown",
               steps: ["Chạy task3_convert_markdown.py", "Chạy pytest tests/test_individual.py Task 1-3"],
-              file: "src/task3_convert_markdown.py", gotcha: "Cài pip install markitdown[pdf]."
+              file: "src/Role_4_EvaluationQA/task3_convert_markdown.py", gotcha: "Cài pip install markitdown[pdf]."
             }
           ],
           6: [
@@ -707,19 +707,19 @@
               role: "Role 2", name: "Data Scraper Dev", badgeClass: "badge-r2",
               goal: "Task 1 — Tải văn bản quy định pháp lý PDF",
               steps: ["Tải >=3 file PDF/DOCX vào legal/", "Hoàn thành script tự động tải nếu có URL"],
-              file: "src/task1_collect_legal_docs.py", gotcha: "Kiểm tra dung lượng file."
+              file: "src/Role_2_DataRetrieval/task1_collect_legal_docs.py", gotcha: "Kiểm tra dung lượng file."
             },
             {
               role: "Role 3", name: "Vector Search Dev", badgeClass: "badge-r3",
               goal: "Task 2 — Crawl tin tức dịch vụ/hướng dẫn",
               steps: ["Crawl 5+ bài tin tức bằng Crawl4AI", "Lưu file JSON chứa full text và metadata"],
-              file: "src/task2_crawl_news.py", gotcha: "Chạy playwright install chromium."
+              file: "src/Role_3_FrontendChatbot/task2_crawl_news.py", gotcha: "Chạy playwright install chromium."
             },
             {
               role: "Role 4", name: "Sparse Search Dev", badgeClass: "badge-r4",
               goal: "Task 3 — Chuyển đổi dữ liệu sang Markdown",
               steps: ["Thực thi task3_convert_markdown.py", "Xác nhận file .md xuất hiện trong standardized/"],
-              file: "src/task3_convert_markdown.py", gotcha: "Giữ nguyên cấu trúc thư mục."
+              file: "src/Role_4_EvaluationQA/task3_convert_markdown.py", gotcha: "Giữ nguyên cấu trúc thư mục."
             },
             {
               role: "Role 5", name: "Frontend UI Dev", badgeClass: "badge-r5",
@@ -741,7 +741,7 @@
         badge: "CHECKPOINT 2",
         title: "Chunking, Indexing & Search Cơ Bản (Task 4–6)",
         durationMinutes: 25,
-        quickCmd: "python -m src.task4_chunking_indexing\npython -m src.task5_semantic_search\npython -m src.task6_lexical_search",
+        quickCmd: "python -m src.Role_2_DataRetrieval.task4_chunking_indexing\npython -m src.Role_3_FrontendChatbot.task5_semantic_search\npython -m src.Role_4_EvaluationQA.task6_lexical_search",
         passCriteria: "Thư mục chroma_db/ sinh ra dữ liệu; pytest Task 4-6 PASSED. (Cuối CP: Demo ngẫu nhiên so sánh Semantic vs BM25 5 phút).",
         roles: {
           4: [
@@ -749,25 +749,25 @@
               role: "Role 1", name: "Team Leader & Architect", badgeClass: "badge-r1",
               goal: "Duyệt config chunking & collection ChromaDB",
               steps: ["Xác nhận CHUNK_SIZE=800, CHUNK_OVERLAP=100", "Đảm bảo COLLECTION_NAME đồng bộ domain", "Xác nhận embedding model BAAI/bge-m3 (1024 dim)", "Đồng bộ code lên Git + theo dõi tiến độ các thành viên trong nhóm"],
-              file: "src/task4_chunking_indexing.py", gotcha: "Đổi corpus phải xoá thư mục chroma_db cũ."
+              file: "src/Role_2_DataRetrieval/task4_chunking_indexing.py", gotcha: "Đổi corpus phải xoá thư mục chroma_db cũ."
             },
             {
               role: "Role 2", name: "Data & Retrieval Specialist", badgeClass: "badge-r2",
               goal: "Task 4 — Chunking & Indexing vào ChromaDB",
               steps: ["Đọc file .md từ data/standardized/", "Dùng RecursiveCharacterTextSplitter chia nhỏ", "Embed chunks bằng SentenceTransformer BAAI/bge-m3", "Upsert chunks + embeddings vào ChromaDB persistent"],
-              file: "src/task4_chunking_indexing.py -> chroma_db/", gotcha: "ChromaDB cosine distance: score = 1.0 - distance."
+              file: "src/Role_2_DataRetrieval/task4_chunking_indexing.py -> chroma_db/", gotcha: "ChromaDB cosine distance: score = 1.0 - distance."
             },
             {
               role: "Role 3", name: "Frontend & Chatbot Dev", badgeClass: "badge-r3",
               goal: "Task 5 — Semantic Search & HyDE",
               steps: ["Hoàn thành hàm semantic_search() dùng Cosine", "Viết _generate_hypothetical_doc() cho HyDE", "Embed hypothetical doc thay vì query gốc", "Trả về top_k kết quả sorted score desc"],
-              file: "src/task5_semantic_search.py", gotcha: "HyDE cải thiện recall ~10-15% với query ngắn."
+              file: "src/Role_3_FrontendChatbot/task5_semantic_search.py", gotcha: "HyDE cải thiện recall ~10-15% với query ngắn."
             },
             {
               role: "Role 4", name: "Evaluation & QA Engineer", badgeClass: "badge-r4",
               goal: "Task 6 — Lexical Search (BM25 & TF-IDF)",
               steps: ["Tokenize văn bản tiếng Việt đơn giản", "Tạo BM25 index bằng BM25Okapi", "Tạo TF-IDF index bằng TfidfVectorizer", "Chạy pytest tests/test_individual.py Task 4-6"],
-              file: "src/task6_lexical_search.py", gotcha: "BM25 xử lý document dài ngắn không đều tốt hơn TF-IDF."
+              file: "src/Role_4_EvaluationQA/task6_lexical_search.py", gotcha: "BM25 xử lý document dài ngắn không đều tốt hơn TF-IDF."
             }
           ],
           5: [
@@ -775,25 +775,25 @@
               role: "Role 1", name: "Team Leader & Architect", badgeClass: "badge-r1",
               goal: "Duyệt tham số Vector DB & Embedding Model",
               steps: ["Kiểm tra model BAAI/bge-m3", "Đảm bảo collection name hợp lệ", "Đồng bộ code lên Git + theo dõi tiến độ các thành viên trong nhóm"],
-              file: "src/task4_chunking_indexing.py", gotcha: "Xóa database cũ nếu đổi corpus."
+              file: "src/Role_2_DataRetrieval/task4_chunking_indexing.py", gotcha: "Xóa database cũ nếu đổi corpus."
             },
             {
               role: "Role 2", name: "Data & Dense Search Dev", badgeClass: "badge-r2",
               goal: "Task 4 — Chunking & Indexing ChromaDB",
               steps: ["Hoàn thành load_documents() & chunk_documents()", "Lưu index vào chroma_db/"],
-              file: "src/task4_chunking_indexing.py", gotcha: "Overlap 100 giữ ranh giới câu."
+              file: "src/Role_2_DataRetrieval/task4_chunking_indexing.py", gotcha: "Overlap 100 giữ ranh giới câu."
             },
             {
               role: "Role 3", name: "Sparse & Rerank Dev", badgeClass: "badge-r3",
               goal: "Task 5 — Semantic Search & HyDE module",
               steps: ["Viết hàm semantic_search()", "Tích hợp HyDE hypothetical document"],
-              file: "src/task5_semantic_search.py", gotcha: "Score = max(0.0, 1.0 - distance)."
+              file: "src/Role_3_FrontendChatbot/task5_semantic_search.py", gotcha: "Score = max(0.0, 1.0 - distance)."
             },
             {
               role: "Role 4", name: "Frontend & Chatbot Dev", badgeClass: "badge-r4",
               goal: "Task 6 — Lexical Search BM25 module",
               steps: ["Tạo chỉ mục BM25Okapi từ corpus", "Trả về kết quả lexical search"],
-              file: "src/task6_lexical_search.py", gotcha: "Tokenize split theo khoảng trắng."
+              file: "src/Role_4_EvaluationQA/task6_lexical_search.py", gotcha: "Tokenize split theo khoảng trắng."
             },
             {
               role: "Role 5", name: "Evaluation & QA Engineer", badgeClass: "badge-r5",
@@ -807,31 +807,31 @@
               role: "Role 1", name: "Team Leader & Architect", badgeClass: "badge-r1",
               goal: "Kiểm tra tiến độ Indexing & Search nhóm 6 người",
               steps: ["Đảm bảo 6 người dùng chung 1 cấu hình vector DB", "Kiểm tra số lượng chunks đã index", "Đồng bộ code lên Git + theo dõi tiến độ các thành viên trong nhóm"],
-              file: "src/task4_chunking_indexing.py", gotcha: "Xác nhận collection.count() > 0."
+              file: "src/Role_2_DataRetrieval/task4_chunking_indexing.py", gotcha: "Xác nhận collection.count() > 0."
             },
             {
               role: "Role 2", name: "Data Scraper Dev", badgeClass: "badge-r2",
               goal: "Hỗ trợ load documents từ standardized/",
               steps: ["Rà soát metadata source & doc_type", "Đảm bảo mỗi chunk có đủ metadata"],
-              file: "src/task4_chunking_indexing.py", gotcha: "Metadata bắt buộc chứa source."
+              file: "src/Role_2_DataRetrieval/task4_chunking_indexing.py", gotcha: "Metadata bắt buộc chứa source."
             },
             {
               role: "Role 3", name: "Vector Search Dev", badgeClass: "badge-r3",
               goal: "Task 4 — Chunking & Indexing ChromaDB",
               steps: ["Thực thi run_pipeline() trong task4", "Lưu trữ persistent database vào chroma_db/"],
-              file: "src/task4_chunking_indexing.py", gotcha: "Upsert theo batch 100 chunks."
+              file: "src/Role_2_DataRetrieval/task4_chunking_indexing.py", gotcha: "Upsert theo batch 100 chunks."
             },
             {
               role: "Role 4", name: "Sparse Search Dev", badgeClass: "badge-r4",
               goal: "Task 5 — Semantic Search & HyDE Search",
               steps: ["Viết hàm hyde_search() và semantic_search()", "Test tìm kiếm câu hỏi tự nhiên"],
-              file: "src/task5_semantic_search.py", gotcha: "Sắp xếp score giảm dần."
+              file: "src/Role_3_FrontendChatbot/task5_semantic_search.py", gotcha: "Sắp xếp score giảm dần."
             },
             {
               role: "Role 5", name: "Frontend UI Dev", badgeClass: "badge-r5",
               goal: "Task 6 — BM25 & TF-IDF Search Module",
               steps: ["Hoàn thành lexical_search() và tfidf_search()", "So sánh độ chính xác từ khoá"],
-              file: "src/task6_lexical_search.py", gotcha: "BM25 có term saturation k1=1.5."
+              file: "src/Role_4_EvaluationQA/task6_lexical_search.py", gotcha: "BM25 có term saturation k1=1.5."
             },
             {
               role: "Role 6", name: "Benchmark QA Dev", badgeClass: "badge-r6",
@@ -847,7 +847,7 @@
         badge: "CHECKPOINT 3",
         title: "Reranking & PageIndex Fallback (Task 7–8)",
         durationMinutes: 20,
-        quickCmd: "python -m src.task7_reranking\npython -m src.task8_pageindex_vectorless",
+        quickCmd: "python -m src.Role_2_DataRetrieval.task7_reranking\npython -m src.Role_3_FrontendChatbot.task8_pageindex_vectorless",
         passCriteria: "RRF Rerank gộp thành công kết quả từ Semantic + BM25; PageIndex fallback trả về kết quả truy vấn cho văn bản cấu trúc.",
         roles: {
           4: [
@@ -855,25 +855,25 @@
               role: "Role 1", name: "Team Leader & Architect", badgeClass: "badge-r1",
               goal: "Duyệt công thức RRF & smoothing constant k=60",
               steps: ["Kiểm tra công thức RRF(d) = sum(1 / (k + rank))", "Xác nhận k=60 từ paper Cormack et al. 2009", "Đảm bảo gộp kết quả công bằng giữa các ranker", "Đồng bộ code lên Git + theo dõi tiến độ các thành viên trong nhóm"],
-              file: "src/task7_reranking.py", gotcha: "RRF không cần API key, chạy hoàn toàn local."
+              file: "src/Role_2_DataRetrieval/task7_reranking.py", gotcha: "RRF không cần API key, chạy hoàn toàn local."
             },
             {
               role: "Role 2", name: "Data & Retrieval Specialist", badgeClass: "badge-r2",
               goal: "Task 7 — Viết thuật toán RRF Reranking + Cross-encoder",
               steps: ["Nhận danh sách ranked_lists từ Semantic & BM25", "Tính điểm cộng dồn RRF cho từng chunk", "Sort kết quả theo điểm RRF giảm dần", "Làm tròn điểm 6 chữ số thập phân", "Tích hợp Cross-encoder Jina Reranker (rerank_cross_encoder()) nếu có JINA_API_KEY"],
-              file: "src/task7_reranking.py", gotcha: "Không có JINA_API_KEY -> tự fallback về RRF, không lỗi."
+              file: "src/Role_2_DataRetrieval/task7_reranking.py", gotcha: "Không có JINA_API_KEY -> tự fallback về RRF, không lỗi."
             },
             {
               role: "Role 3", name: "Frontend & Chatbot Dev", badgeClass: "badge-r3",
               goal: "Task 8 — Tích hợp PageIndex Vectorless RAG",
               steps: ["Đọc PAGEINDEX_API_KEY từ .env", "Convert Markdown sang PDF tạm bằng fpdf2", "Upload PDF lên PageIndex: client.submit_document()", "Poll get_retrieval() cho tới khi status completed"],
-              file: "src/task8_pageindex_vectorless.py", gotcha: "Cache doc_ids vào pageindex_doc_ids.json."
+              file: "src/Role_3_FrontendChatbot/task8_pageindex_vectorless.py", gotcha: "Cache doc_ids vào pageindex_doc_ids.json."
             },
             {
               role: "Role 4", name: "Evaluation & QA Engineer", badgeClass: "badge-r4",
               goal: "Test thử câu hỏi ngoài domain để verify fallback",
               steps: ["Thử câu hỏi rác (vd: xyzabc123)", "Kiểm tra output fallback trả về source='pageindex'", "Chạy pytest tests/test_individual.py Task 7-8"],
-              file: "src/task8_pageindex_vectorless.py", gotcha: "PageIndex đọc tài liệu theo mục lục/tiêu đề."
+              file: "src/Role_3_FrontendChatbot/task8_pageindex_vectorless.py", gotcha: "PageIndex đọc tài liệu theo mục lục/tiêu đề."
             }
           ],
           5: [
@@ -881,25 +881,25 @@
               role: "Role 1", name: "Team Leader & Architect", badgeClass: "badge-r1",
               goal: "Rà soát logic RRF Rerank & PageIndex",
               steps: ["Xác nhận logic RRF fusion hoạt động tốt", "Đảm bảo cache doc_ids không bị nộp đè", "Đồng bộ code lên Git + theo dõi tiến độ các thành viên trong nhóm"],
-              file: "src/task7_reranking.py", gotcha: "RRF gộp top-k từ 2 bảng xếp hạng."
+              file: "src/Role_2_DataRetrieval/task7_reranking.py", gotcha: "RRF gộp top-k từ 2 bảng xếp hạng."
             },
             {
               role: "Role 2", name: "Data & Dense Search Dev", badgeClass: "badge-r2",
               goal: "Task 7 — Viết hàm rerank_rrf()",
               steps: ["Tính điểm RRF: 1.0 / (60 + rank)", "Trả về list top_k candidates"],
-              file: "src/task7_reranking.py", gotcha: "Rank bắt đầu từ 1."
+              file: "src/Role_2_DataRetrieval/task7_reranking.py", gotcha: "Rank bắt đầu từ 1."
             },
             {
               role: "Role 3", name: "Sparse & Rerank Dev", badgeClass: "badge-r3",
               goal: "Task 7 (mở rộng) — Cross-encoder Jina Reranker",
               steps: ["Tích hợp Jina Reranker API nếu có key", "Fallback về RRF nếu không có JINA_API_KEY"],
-              file: "src/task7_reranking.py", gotcha: "Jina Reranker multilingual tốt tiếng Việt."
+              file: "src/Role_2_DataRetrieval/task7_reranking.py", gotcha: "Jina Reranker multilingual tốt tiếng Việt."
             },
             {
               role: "Role 4", name: "Frontend & Chatbot Dev", badgeClass: "badge-r4",
               goal: "Task 8 — Tích hợp PageIndex SDK vectorless",
               steps: ["Viết hàm pageindex_search()", "Lưu cache doc_ids vào JSON file"],
-              file: "src/task8_pageindex_vectorless.py", gotcha: "Poll interval 2 giây, timeout 60 giây."
+              file: "src/Role_3_FrontendChatbot/task8_pageindex_vectorless.py", gotcha: "Poll interval 2 giây, timeout 60 giây."
             },
             {
               role: "Role 5", name: "Evaluation & QA Engineer", badgeClass: "badge-r5",
@@ -913,37 +913,37 @@
               role: "Role 1", name: "Team Leader & Architect", badgeClass: "badge-r1",
               goal: "Kiểm tra tích hợp RRF & PageIndex nhóm 6 người",
               steps: ["Đảm bảo 6 người dùng chung công thức RRF", "Rà soát file cache pageindex_doc_ids.json", "Đồng bộ code lên Git + theo dõi tiến độ các thành viên trong nhóm"],
-              file: "src/task7_reranking.py", gotcha: "Không upload lại PDF nếu đã cached."
+              file: "src/Role_2_DataRetrieval/task7_reranking.py", gotcha: "Không upload lại PDF nếu đã cached."
             },
             {
               role: "Role 2", name: "Data Scraper Dev", badgeClass: "badge-r2",
               goal: "Hỗ trợ convert Markdown sang PDF cho PageIndex",
               steps: ["Dùng fpdf2 tạo PDF từ file .md", "Đảm bảo encode latin-1 safe charmap"],
-              file: "src/task8_pageindex_vectorless.py", gotcha: "fpdf2 không ném lỗi unicode khi strip char."
+              file: "src/Role_3_FrontendChatbot/task8_pageindex_vectorless.py", gotcha: "fpdf2 không ném lỗi unicode khi strip char."
             },
             {
               role: "Role 3", name: "Vector Search Dev", badgeClass: "badge-r3",
               goal: "Task 7 — Viết thuật toán RRF Reranking + Cross-encoder",
               steps: ["Tính toán rrf_scores từ dense + sparse", "Return candidates sorted by rrf_score", "Tích hợp Cross-encoder Jina Reranker (rerank_cross_encoder()) nếu có JINA_API_KEY"],
-              file: "src/task7_reranking.py", gotcha: "RRF score nằm trong khoảng ~0.01 - 0.03; không có JINA_API_KEY vẫn fallback về RRF."
+              file: "src/Role_2_DataRetrieval/task7_reranking.py", gotcha: "RRF score nằm trong khoảng ~0.01 - 0.03; không có JINA_API_KEY vẫn fallback về RRF."
             },
             {
               role: "Role 4", name: "Sparse Search Dev", badgeClass: "badge-r4",
               goal: "Task 8 — Tích hợp SDK PageIndex",
               steps: ["Khởi tạo PageIndexClient(api_key)", "Submit query & poll retrieval response"],
-              file: "src/task8_pageindex_vectorless.py", gotcha: "Yêu cầu PAGEINDEX_API_KEY trong .env."
+              file: "src/Role_3_FrontendChatbot/task8_pageindex_vectorless.py", gotcha: "Yêu cầu PAGEINDEX_API_KEY trong .env."
             },
             {
               role: "Role 5", name: "Frontend UI Dev", badgeClass: "badge-r5",
               goal: "Kiểm tra output format của PageIndex",
               steps: ["Đảm bảo output chứa 'content', 'score', 'source'", "Đánh dấu source='pageindex'"],
-              file: "src/task8_pageindex_vectorless.py", gotcha: "Format output thống nhất với RAG."
+              file: "src/Role_3_FrontendChatbot/task8_pageindex_vectorless.py", gotcha: "Format output thống nhất với RAG."
             },
             {
               role: "Role 6", name: "Benchmark QA Dev", badgeClass: "badge-r6",
               goal: "Đo thời gian phản hồi (latency) RRF vs PageIndex",
               steps: ["Đo thời gian chạy RRF (~10ms)", "Đo thời gian chạy PageIndex (~2-5s)"],
-              file: "src/task8_pageindex_vectorless.py", gotcha: "PageIndex tốn latency hơn do gọi API."
+              file: "src/Role_3_FrontendChatbot/task8_pageindex_vectorless.py", gotcha: "PageIndex tốn latency hơn do gọi API."
             }
           ]
         }
@@ -953,7 +953,7 @@
         badge: "CHECKPOINT 4",
         title: "Pipeline Hoàn Chỉnh & Generation (Task 9–10)",
         durationMinutes: 25,
-        quickCmd: "python -m src.task9_retrieval_pipeline\npython -m src.task10_generation\npython -m pytest tests/test_individual.py -v",
+        quickCmd: "python -m src.Role_2_DataRetrieval.task9_retrieval_pipeline\npython -m src.Role_3_FrontendChatbot.task10_generation\npython -m pytest tests/test_individual.py -v",
         passCriteria: "Chạy pytest tests/test_individual.py đạt 35/35 TEST PASSED (Hoàn thành 50đ cá nhân). (Cuối CP: Coach chốt 50đ cá nhân & gỡ lỗi 10 phút).",
         roles: {
           4: [
@@ -967,19 +967,19 @@
               role: "Role 2", name: "Data & Retrieval Specialist", badgeClass: "badge-r2",
               goal: "Task 9 — Nối chuỗi Retrieval & Fallback logic",
               steps: ["Chạy Semantic + Lexical song song", "Gộp thứ hạng bằng RRF Rerank", "Kiểm tra điểm Cosine gốc dense_results[0]['score']", "Nếu < 0.48 -> Fallback sang PageIndex search"],
-              file: "src/task9_retrieval_pipeline.py", gotcha: "BẪY: So nhầm điểm RRF (luôn ~0.016) thay vì Cosine gốc!"
+              file: "src/Role_2_DataRetrieval/task9_retrieval_pipeline.py", gotcha: "BẪY: So nhầm điểm RRF (luôn ~0.016) thay vì Cosine gốc!"
             },
             {
               role: "Role 3", name: "Frontend & Chatbot Dev", badgeClass: "badge-r3",
               goal: "Task 10 — Reordering & LLM Generation có Citation",
               steps: ["Xếp lại thứ tự chunks tránh lost-in-the-middle: front + back[::-1]", "Gắn nhãn source cho từng chunk trong context", "Gọi OpenRouter (inclusionai/ling-3.0-flash:free)", "SYSTEM_PROMPT yêu cầu bắt buộc trích dẫn [Source]"],
-              file: "src/task10_generation.py", gotcha: "Liu et al. 2023: LLM chỉ nhớ đầu & cuối, quên giữa. OpenRouter free tier giới hạn 50 req/ngày -> nếu bị 429, đổi sang OPENAI_API_KEY hoặc GEMINI_API_KEY nếu có."
+              file: "src/Role_3_FrontendChatbot/task10_generation.py", gotcha: "Liu et al. 2023: LLM chỉ nhớ đầu & cuối, quên giữa. OpenRouter free tier giới hạn 50 req/ngày -> nếu bị 429, đổi sang OPENAI_API_KEY hoặc GEMINI_API_KEY nếu có."
             },
             {
               role: "Role 4", name: "Evaluation & QA Engineer", badgeClass: "badge-r4",
               goal: "Rà soát định dạng trích dẫn & fallback response",
               steps: ["Kiểm tra câu trả lời có chứa nhãn trích dẫn [Source]", "Xác nhận nếu không đủ context LLM trả lời từ chối bịa đặt", "Chạy pytest toàn bộ 35 bài test"],
-              file: "src/task10_generation.py", gotcha: "Temperature=0.3 cho factual accuracy."
+              file: "src/Role_3_FrontendChatbot/task10_generation.py", gotcha: "Temperature=0.3 cho factual accuracy."
             }
           ],
           5: [
@@ -993,25 +993,25 @@
               role: "Role 2", name: "Data & Dense Search Dev", badgeClass: "badge-r2",
               goal: "Task 9 — Nối Semantic + BM25 + RRF",
               steps: ["Hoàn thành hàm retrieve()", "Đánh dấu item['source'] = 'hybrid'"],
-              file: "src/task9_retrieval_pipeline.py", gotcha: "Fetch top_k * 3 candidates để rerank."
+              file: "src/Role_2_DataRetrieval/task9_retrieval_pipeline.py", gotcha: "Fetch top_k * 3 candidates để rerank."
             },
             {
               role: "Role 3", name: "Sparse & Rerank Dev", badgeClass: "badge-r3",
               goal: "Task 9 — Tinh chỉnh ngưỡng Fallback (SCORE_THRESHOLD=0.48)",
               steps: ["Lấy dense_results[0]['score'] so sánh với 0.48", "Kích hoạt pageindex_search nếu score kém"],
-              file: "src/task9_retrieval_pipeline.py", gotcha: "0.48 nằm giữa query đúng & query rác."
+              file: "src/Role_2_DataRetrieval/task9_retrieval_pipeline.py", gotcha: "0.48 nằm giữa query đúng & query rác."
             },
             {
               role: "Role 4", name: "Frontend & Chatbot Dev", badgeClass: "badge-r4",
               goal: "Task 10 — Reordering & LLM Citation Generation",
               steps: ["Viết reorder_for_llm() & format_context()", "Gọi OpenRouter LLM sinh câu trả lời"],
-              file: "src/task10_generation.py", gotcha: "Temperature=0.3, Top_P=0.9. OpenRouter free tier giới hạn 50 req/ngày -> nếu bị 429, đổi sang OPENAI_API_KEY hoặc GEMINI_API_KEY nếu có."
+              file: "src/Role_3_FrontendChatbot/task10_generation.py", gotcha: "Temperature=0.3, Top_P=0.9. OpenRouter free tier giới hạn 50 req/ngày -> nếu bị 429, đổi sang OPENAI_API_KEY hoặc GEMINI_API_KEY nếu có."
             },
             {
               role: "Role 5", name: "Evaluation & QA Engineer", badgeClass: "badge-r5",
               goal: "Kiểm tra chất lượng câu trả lời & citation tags",
               steps: ["Test thử 5 câu hỏi có trong corpus", "Đảm bảo câu trả lời chứa citation đúng"],
-              file: "src/task10_generation.py", gotcha: "Citation định dạng [Source Name, Year]."
+              file: "src/Role_3_FrontendChatbot/task10_generation.py", gotcha: "Citation định dạng [Source Name, Year]."
             }
           ],
           6: [
@@ -1031,19 +1031,19 @@
               role: "Role 3", name: "Vector Search Dev", badgeClass: "badge-r3",
               goal: "Task 9 — Nối chuỗi Retrieval Pipeline",
               steps: ["Gọi semantic_search và lexical_search", "Gộp thứ hạng bằng rerank_rrf"],
-              file: "src/task9_retrieval_pipeline.py", gotcha: "Sử dụng hyde_search nếu enabled."
+              file: "src/Role_2_DataRetrieval/task9_retrieval_pipeline.py", gotcha: "Sử dụng hyde_search nếu enabled."
             },
             {
               role: "Role 4", name: "Sparse Search Dev", badgeClass: "badge-r4",
               goal: "Task 9 — Kiểm tra logic Fallback PageIndex",
               steps: ["Kiểm tra best_score từ Cosine gốc", "Gọi pageindex_search khi best_score < 0.48"],
-              file: "src/task9_retrieval_pipeline.py", gotcha: "Bắt try/except nếu PageIndex failed."
+              file: "src/Role_2_DataRetrieval/task9_retrieval_pipeline.py", gotcha: "Bắt try/except nếu PageIndex failed."
             },
             {
               role: "Role 5", name: "Frontend UI Dev", badgeClass: "badge-r5",
               goal: "Task 10 — Document Reordering & LLM Generation",
               steps: ["Thực thi reorder_for_llm()", "Gửi prompt tới OpenRouter sinh câu trả lời"],
-              file: "src/task10_generation.py", gotcha: "Model inclusionai/ling-3.0-flash:free. Free tier giới hạn 50 req/ngày -> nếu bị 429, đổi sang OPENAI_API_KEY hoặc GEMINI_API_KEY nếu có."
+              file: "src/Role_3_FrontendChatbot/task10_generation.py", gotcha: "Model inclusionai/ling-3.0-flash:free. Free tier giới hạn 50 req/ngày -> nếu bị 429, đổi sang OPENAI_API_KEY hoặc GEMINI_API_KEY nếu có."
             },
             {
               role: "Role 6", name: "Benchmark QA Dev", badgeClass: "badge-r6",
@@ -1072,7 +1072,7 @@
             {
               role: "Role 2", name: "Data & Retrieval Specialist", badgeClass: "badge-r2",
               goal: "Nối hàm generate_with_citation() vào app.py",
-              steps: ["Import generate_with_citation từ src.task10_generation", "Gọi hàm khi user nhập câu hỏi trong Streamlit", "Trả về answer và danh sách sources cho UI"],
+              steps: ["Import generate_with_citation từ src.Role_3_FrontendChatbot.task10_generation", "Gọi hàm khi user nhập câu hỏi trong Streamlit", "Trả về answer và danh sách sources cho UI"],
               file: "app.py", gotcha: "Chèn cache @st.cache_resource nếu cần."
             },
             {
@@ -1179,7 +1179,7 @@
               role: "Role 2", name: "Data & Retrieval Specialist", badgeClass: "badge-r2",
               goal: "Giải đáp câu hỏi kỹ thuật về RAG Pipeline",
               steps: ["Sẵn sàng giải thích về ChromaDB, bge-m3, BM25", "Giải thích cơ chế RRF Reranking (k=60)"],
-              file: "src/task9_retrieval_pipeline.py", gotcha: "Hiểu rõ tại sao dùng điểm Cosine gốc cho fallback."
+              file: "src/Role_2_DataRetrieval/task9_retrieval_pipeline.py", gotcha: "Hiểu rõ tại sao dùng điểm Cosine gốc cho fallback."
             },
             {
               role: "Role 3", name: "Frontend & Chatbot Dev", badgeClass: "badge-r3",
@@ -1205,13 +1205,13 @@
               role: "Role 2", name: "Data & Dense Search Dev", badgeClass: "badge-r2",
               goal: "Giải thích kỹ thuật Dense Search & HyDE",
               steps: ["Giải thích cơ chế embed hypothetical doc", "Trình bày cách lưu trữ ChromaDB"],
-              file: "src/task5_semantic_search.py", gotcha: "HyDE giúp tăng recall với query ngắn."
+              file: "src/Role_3_FrontendChatbot/task5_semantic_search.py", gotcha: "HyDE giúp tăng recall với query ngắn."
             },
             {
               role: "Role 3", name: "Sparse & Rerank Dev", badgeClass: "badge-r3",
               goal: "Giải thích kỹ thuật RRF Rerank & Fallback",
               steps: ["Giải thích công thức gộp thứ hạng RRF", "Trình bày cơ chế kích hoạt PageIndex fallback"],
-              file: "src/task7_reranking.py", gotcha: "RRF gộp rank không phụ thuộc thang điểm."
+              file: "src/Role_2_DataRetrieval/task7_reranking.py", gotcha: "RRF gộp rank không phụ thuộc thang điểm."
             },
             {
               role: "Role 4", name: "Frontend & Chatbot Dev", badgeClass: "badge-r4",
@@ -1243,13 +1243,13 @@
               role: "Role 3", name: "Vector Search Dev", badgeClass: "badge-r3",
               goal: "Giải thích vector store ChromaDB & BAAI/bge-m3",
               steps: ["Trình bày về embedding dim 1024", "Giải thích Cosine similarity search"],
-              file: "src/task4_chunking_indexing.py", gotcha: "Giải thích ưu điểm của model bge-m3."
+              file: "src/Role_2_DataRetrieval/task4_chunking_indexing.py", gotcha: "Giải thích ưu điểm của model bge-m3."
             },
             {
               role: "Role 4", name: "Sparse Search Dev", badgeClass: "badge-r4",
               goal: "Giải thích BM25 & PageIndex Fallback",
               steps: ["Giải thích nguyên lý BM25 term saturation", "Trình bày giải pháp Vectorless RAG"],
-              file: "src/task8_pageindex_vectorless.py", gotcha: "PageIndex thích hợp cho tài liệu dài."
+              file: "src/Role_3_FrontendChatbot/task8_pageindex_vectorless.py", gotcha: "PageIndex thích hợp cho tài liệu dài."
             },
             {
               role: "Role 5", name: "Frontend UI Dev", badgeClass: "badge-r5",
